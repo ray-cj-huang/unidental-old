@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
-function App() {
+import Navbar from './components/navbar/navbar';
+import Main from "./pages/main/main";
+import About from "./pages/about/about";
+import Contact from "./pages/contact/contact";
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          UNIDENTAL
-        </p>
-        <a
-          className="App-link"
-          href="https://goo.gl/maps/VLhEh3h3rKAzVgkW6"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Visit us!
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Navbar />
+        <Switch>
+          <Route path="/">
+            <Main />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
-
-export default App;
