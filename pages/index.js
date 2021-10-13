@@ -3,7 +3,6 @@ import Head from 'next/head'
 import Navbar from '../components/navbar'
 
 export default function Home() {
-  const isDesktop = window.innerWidth > 768;
   return (
     <div className="flex flex-col min-h-screen">
       <Head>
@@ -72,8 +71,7 @@ export default function Home() {
         </div>
       </main>
 
-      
-      <footer className="flex items-center justify-center w-full h-24 border-t">
+      {/* <footer className="flex items-center justify-center w-full h-24 border-t">
         <a
           className="flex items-center justify-center"
           href="https://unidental.us/"
@@ -81,7 +79,16 @@ export default function Home() {
           Copyright by Uni Dental, Practice of David Huang DDS{' '}
           <img src="/logo.svg" alt="Unidental Logo" className="h-8 ml-2" />
         </a>
-      </footer>
+      </footer>  */}
+      <footer className="flex items-center justify-center w-full h-24 border-t">
+        <a
+          className="flex items-center justify-center"
+          href="https://unidental.us/"
+        >
+          All rights reserved by Uni Dental{' '}
+          <img src="/logo.svg" alt="Unidental Logo" className="h-8 ml-2" />.
+        </a>
+      </footer> 
     </div>
   )
 }
