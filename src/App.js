@@ -14,7 +14,7 @@ export default function App() {
   return (
     <Router>
       <div>
-        <Navbar />
+        {/* <Navbar /> */}
         <Switch>
           <Route path="/">
             <Main />
